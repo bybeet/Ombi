@@ -33,7 +33,7 @@ namespace Ombi.Api
 {
     public static class RetryHandler
     {
-        private static readonly TimeSpan[] DefaultRetryTime = { TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(5) };
+        private static readonly TimeSpan[] DefaultRetryTime = { TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(3) };
 
         public static T Execute<T>(Func<T> action, TimeSpan[] timeSpan = null)
         {
